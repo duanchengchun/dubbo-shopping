@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+    <!--服务提供者的配置文件核心就是服务注册-->
+    <dubbo:application name="orders-service-provider"></dubbo:application>
+    <!--    指定注册中心地址，将来向该地址注册服务-->
+    <dubbo:registry address="zookeeper://192.168.85.200:2181"></dubbo:registry>
+    <!--指定将来服务消费者消费我的时候，使用的rpc协议是什么-->
+    <dubbo:protocol name="dubbo" port="55555"></dubbo:protocol>
+    <!--    将服务对象发布注册给注册中心-->
+    <dubbo:service interface="com.oracle.shopping.orders.service.OrdersService" ref="ordersServiceImpl"></dubbo:service>
+
+</beans>

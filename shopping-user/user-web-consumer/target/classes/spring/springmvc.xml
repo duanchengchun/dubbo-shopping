@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+       <!-- 引入spring相关的约束，dtd、xsd,这是一个网络地址 -->
+       <!-- 开启springmvc的注解支持 
+       默认自带了 基于注解的处理器映射器和基于注解的处理器适配器
+       
+       -->
+  <mvc:annotation-driven></mvc:annotation-driven>
+  <!-- 配置一个扫包器，去扫描指定包下的所有注解(会扫到controller注解，实例化处理器对象，requestMapping等也会扫到) -->
+  <context:component-scan base-package="com.oracle.shopping.user.controller"></context:component-scan>
+  
+  <!--  思考：springmvc需要5大组件一块工作，但是我好像只配了dispatcherServlet和handler，为什么? -->
+  
+  <!-- 视图解析器如果不配，会默认提供一个基于jsp的视图解析器 
+  springmvc推荐视图的位置存储在不公开的路径下比如WEB-INF
+  
+  -->
+
+
+	
+	
+       
+  </beans>     
+       

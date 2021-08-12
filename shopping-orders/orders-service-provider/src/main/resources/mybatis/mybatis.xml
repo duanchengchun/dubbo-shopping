@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+ 
+ <!-- 核心配置文件 -->
+ <configuration>
+
+ <!-- 注意由于将来是由spring来创建mapper代理对象，所以说mapper文件交给spring去引 -->
+ <settings>
+  <!--是否开启自动驼峰命名规则（camel case）映射，即从经典数据库列名 A_COLUMN 到经典Java 属性名 aColumn 的类似映射。 -->
+  <setting name="mapUnderscoreToCamelCase" value="true"/>
+ </settings>
+  <typeAliases>
+  <package name="com.oracle.shopping.orders.po"></package>
+  </typeAliases>
+  <!-- 注意事项:由于spring本身就是ioc的工厂，负责生产对象，、
+  所以mybatis和spring整合的时候,数据库环境(数据库连接池)交给spring
+ 来创建和管理
+  -->
+  
+
+ 
+ </configuration>
