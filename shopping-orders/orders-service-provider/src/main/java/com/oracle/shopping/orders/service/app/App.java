@@ -15,5 +15,6 @@ public class App {
         ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring/spring-*.xml");
         System.in.read();
         System.out.println(222);
+        System.out.println(333);
     }
 }
