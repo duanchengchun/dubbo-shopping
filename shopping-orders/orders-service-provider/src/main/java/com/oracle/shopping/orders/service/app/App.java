@@ -14,6 +14,7 @@ public class App {
     public static void main(String[] args) throws IOException {
         ClassPathXmlApplicationContext ioc = new ClassPathXmlApplicationContext("spring/spring-*.xml");
         System.in.read();
+        System.out.println("fsa af ");
         System.out.println(333);
     }
 }
