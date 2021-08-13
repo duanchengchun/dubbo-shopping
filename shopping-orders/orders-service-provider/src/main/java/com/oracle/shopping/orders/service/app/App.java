@@ -16,5 +16,7 @@ public class App {
         System.in.read();
         System.out.println(222);
         System.out.println(333);
+        System.out.println("fsa af ");
+        System.out.println(333);
     }
 }
